@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Raio de Borda</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box"></div>
+    <div class="controls">
+        <div class="control-group">
+            <label for="top-left">Superior Esquerdo:</label>
+            <input type="range" id="top-left" min="0" max="100" value="0">
+            <span id="top-left-value">0</span>
+          </div>
+          <div class="control-group">
+            <label for="top-right">Superior Direito:</label>
+            <input type="range" id="top-right" min="0" max="100" value="0">
+            <span id="top-right-value">0</span>
+          </div>
+          <div class="control-group">
+            <label for="bottom-left">Inferior Esquerdo:</label>
+            <input type="range" id="bottom-left" min="0" max="100" value="0">
+            <span id="bottom-left-value">0</span>
+          </div>
+          <div class="control-group">
+            <label for="bottom-right">Inferior Direito:</label>
+            <input type="range" id="bottom-right" min="0" max="100" value="0">
+            <span id="bottom-right-value">0</span>
+          </div>
+      <div class="button-group">
+        <button onclick="applyBorderRadius()">Aplicar</button>
+        <button onclick="copyCSS()">Copiar CSS</button>
+      </div>
+    </div>
+  </div>
+
+  <textarea id="cssOutput" readonly></textarea>
+
+  <script src="src/js/script.js"></script>
+</body>
+</html>
